@@ -1,0 +1,24 @@
+body{
+
+background-color:black;
+
+}
+h2, ul{
+	
+	color:green;
+	border: 2px dotted red;
+}
+
+body{
+	
+	line-height:50px;
+	letter-spacing:5px;
+	width:50%;
+	
+}
+
+html{
+	display:flex;
+	background-color:red;
+	justify-content:center;
+}

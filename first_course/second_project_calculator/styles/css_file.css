@@ -1,0 +1,41 @@
+.disp{
+	background-color:blue;
+	width:500px;
+	height:80px;
+	font-size:30px;
+	margin-top:5px;
+}
+
+
+body{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	
+}
+.divbody{
+	justify-content:center;
+	width:50%;
+	border: 2px solid black;
+	display:flex;
+	margin-top:130px;
+	
+}
+.form{
+	justify-content:center;
+}
+.cal{
+	display:flex;
+}
+
+.button{
+ height:50px;
+ width:80px;
+font-size:30px;
+
+}
+#button{
+padding-left:86px;
+padding-top:15px;
+padding-bottom:15px;
+}

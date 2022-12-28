@@ -1,0 +1,15 @@
+#clock{
+	width:500px;
+	height:100px;
+	background-color:grey;
+	border: 2px dashed black;
+	font-size:80px;
+	padding-left:50px;
+	align-items:center;
+}
+
+body{
+	display:flex;
+	
+	justify-content:center;
+}
