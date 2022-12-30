@@ -26,7 +26,7 @@ namespace FirstWebApi_Backend.Controllers
         {
             /*var users = data.users.ToList();
             return users;*/
-            // return NotFound();
+          //   return NotFound();
 
             /*UserEntity u = new UserEntity("uraj");
             data.users.Add(u);
