@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr/public_api';
+import { Observable, of } from 'rxjs';
 
 import { AccountService } from '../Services/account.service';
+import { User } from '../_models/user';
 
 @Component({
   selector: 'app-nav',
@@ -11,28 +15,29 @@ export class NavComponent implements OnInit {
   model: any = {
 
   }
-  isLoggedIn: boolean = false;
+ 
+currentUser$:Observable<User | null>=of(null);
+
   data: any = {}
-  constructor(private account: AccountService) { }
+  constructor(public account: AccountService, private route:Router) { }
 
   ngOnInit(): void {
-    this.getCurrentUser();                                          
+   this.currentUser$=this.account.currentuser$;                                         
   }
 
-  getCurrentUser(){
-    this.account.currentuser$.subscribe({
-      next:user=> this.isLoggedIn=!!user,
-      error:error=>console.log(error)
-    })
-  }
+  // getCurrentUser(){
+  //   this.account.currentuser$.subscribe({
+  //     next:user=> console.log(user),
+  //     error:error=>console.log(error)
+  //   })
+  // }
 
 
   login() {
     console.log(this.model);
     this.account.login(this.model).subscribe({
       next: response => {
-        this.isLoggedIn = true;
-        console.log(response)
+        this.route.navigateByUrl("/members");
       },
       error: () => console.log("some error"),
       complete: () => console.log("data transfer compalete")
@@ -40,7 +45,8 @@ export class NavComponent implements OnInit {
   }
 
   logout(){
+    this.route.navigateByUrl("/");
     this.account.logout();
-    this.isLoggedIn=false;
+    
   }
 }
