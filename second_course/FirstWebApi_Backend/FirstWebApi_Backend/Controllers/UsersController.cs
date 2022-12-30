@@ -1,5 +1,6 @@
 ﻿using FirstWebApi_Backend.Data;
 using FirstWebApi_Backend.Entity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace FirstWebApi_Backend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UsersController:ControllerBase
+    public class UsersController:BaseApiController
     {
         private readonly DataContext data;
 
@@ -19,7 +20,8 @@ namespace FirstWebApi_Backend.Controllers
             data = d;
         }
 
-        [HttpGet]
+        [Authorize]
+        [HttpGet("user")]
         public ActionResult<IEnumerable<UserEntity>> GetUser()
         {
             /*var users = data.users.ToList();
@@ -29,6 +31,13 @@ namespace FirstWebApi_Backend.Controllers
             /*UserEntity u = new UserEntity("uraj");
             data.users.Add(u);
             data.SaveChanges();*/
+
+            return data.users.ToList();
+        }
+
+        [HttpGet("users")]
+        public ActionResult<IEnumerable<UserEntity>> GetUsers()
+        {
 
             return data.users.ToList();
         }

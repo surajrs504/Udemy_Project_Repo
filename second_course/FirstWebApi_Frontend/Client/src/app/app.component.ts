@@ -14,7 +14,7 @@ users:any;
   }
   ngOnInit(){
     console.log("helloo fsfsf ffdfdfdfdccccc");
-  this.http.get('https://localhost:5001/Users').subscribe({
+  this.http.get('https://localhost:5001/Users/users').subscribe({
     next: result=> this.users=result,
     error: error=> console.log("some error occured"),
     complete: ()=> console.log("completed!!")
