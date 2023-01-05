@@ -18,7 +18,7 @@ using FirstWebApi_Backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using FirstWebApi_Backend.Middleware;
 
 namespace FirstWebApi_Backend
 {
@@ -73,8 +73,8 @@ namespace FirstWebApi_Backend
 
             app.UseRouting();
 
-           
 
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
             app.UseAuthentication();    
             app.UseAuthorization();

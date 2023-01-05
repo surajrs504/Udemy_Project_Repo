@@ -11,7 +11,7 @@ import { User } from './_models/user';
 })
 export class AppComponent implements OnInit {
   title = 'helllo world';
-users:any;
+//users:any;
   constructor(private http: HttpClient, private acc:AccountService){
 
   }
@@ -22,7 +22,7 @@ users:any;
 
   // getuser(){
   //   console.log("helloo fsfsf ffdfdfdfdccccc");
-  //   this.http.get('https://localhost:5001/Users/users').subscribe({
+  //   this.http.get('https://localhost:5000/Users/users').subscribe({
   //     next: result=> this.users=result,
   //     error: error=> console.log("some error occured"),
   //     complete: ()=> console.log("completed!!")

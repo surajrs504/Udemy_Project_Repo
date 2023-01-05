@@ -1,3 +1,13 @@
 .dropdown-toggle, .dropdown-item{
     cursor: pointer;
 }
+.navbar-brand{
+    color: azure;
+    font-size: 25px
+}
+.nav-link .active{
+    color: chartreuse;
+}
+.nav-link{
+    color: azure;
+}
