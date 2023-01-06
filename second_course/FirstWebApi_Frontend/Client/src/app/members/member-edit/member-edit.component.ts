@@ -44,9 +44,14 @@ loadmember(){
 }
 
 update(){
+  this.mem.updatemember(this.editForm?.value).subscribe({
+    next:_=>{
+      this.toastr.success("profile updated");
+      this.editForm?.reset(this.member);
+    }
+  })
   console.log(this.member);
-  this.toastr.success("profile updated");
-  this.editForm?.reset(this.member);
+  
 }
 
 }

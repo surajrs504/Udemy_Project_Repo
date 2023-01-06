@@ -36,9 +36,9 @@
     </div>
     <div class="col-8">
 
-        <tabset class="member-tabs">
+        <tabset class="member-tabs ">
 
-            <tab heading="About {{member.knownAs}}">
+            <tab class="tabb" heading="About {{member.knownAs}}">
                 <h4>Description</h4>
                 <p>{{member.introduction}}</p>
                 <h4>Looking for</h4>
@@ -46,28 +46,28 @@
 
             </tab>
 
-            <tab heading="Interests">
+            <tab class="tabb"  heading="Interests">
 
                 <h4>Interests</h4>
                 <p>{{member.interests}}</p>
 
             </tab>
 
-            <tab heading="About{{member.knownAs}}">
+            <tab class="tabb"  heading="About{{member.knownAs}}">
 
                 <h4>Looking for</h4>
                 <p>{{member.lookingFor}}</p>
 
             </tab>
 
-            <tab heading="Photos">
+            <tab class="tabb"  heading="Photos">
 
                 
                 <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
 
             </tab>
 
-            <tab heading="Messages">
+            <tab class="tabb" heading="Messages">
 
                 
                 <p>Messages will go here</p>

@@ -1,0 +1,46 @@
+<!-- <form class="d-flex" #loginpage="ngForm" (ngSubmit)="login()" autocomplete="off" >
+          
+    <input
+  name="username"
+  [(ngModel)]="model.username"
+  class="form-control me-2" type="text" placeholder="username" >
+  
+  <input 
+  name="password"
+  [(ngModel)]="model.password"
+  class="form-control me-2" type="password" placeholder="password" >
+
+  <button class="btn btn-success" type="submit">Search</button>
+  <button class="btn btn-primary" (click)="cancel()">cancel</button>
+</form> -->
+
+
+
+<form #registerform="ngForm" (ngSubmit)="login()" autocomplete="off">
+
+    <h2 class="text-center text-primary">Login</h2>
+    <hr>
+    <div class="mb-3">
+        <input 
+        type="text"
+        class="form-control"
+        [(ngModel)]="model.username"
+        placeholder="username"
+        name="username"
+        >
+    </div>
+    <div class="mb-3">
+        <input 
+        class="form-control"
+        type="password"
+        [(ngModel)]="model.password"
+        placeholder="password"
+        name="password"
+        >
+    </div>
+    <div class="text-center">
+            <button class="btn btn-primary me-2 reg" type="submit"> Login</button>
+            <button class="btn btn-default btn-outline-secondary" (click)="cancel()" type="button"> Cancel</button>
+    </div>
+
+    </form>

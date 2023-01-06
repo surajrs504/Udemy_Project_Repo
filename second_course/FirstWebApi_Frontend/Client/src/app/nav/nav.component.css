@@ -3,11 +3,20 @@
 }
 .navbar-brand{
     color: azure;
-    font-size: 25px
+    font-size: 30px;
+    font-family:Cambria, Cochin;
 }
-.nav-link .active{
-    color: chartreuse;
-}
+
 .nav-link{
     color: azure;
+   
+}
+.nav-item{
+    font-weight: 500;
+    font-size: 20px;
+}
+.text
+{
+    font-weight: 500;
+    font-size: 17px;
 }

@@ -6,8 +6,8 @@
         </div>
 
         <div class="col-8">
-            <div class="alert alert-info" *ngIf="editForm.dirty">
-                <p><strong> Information:</strong>youe have made changes. Any unsaved changes will not be saved</p>
+            <div class="alert alert-info pb-0"  *ngIf="editForm.dirty">
+                <p><strong> Information:</strong> you have made changes. Any unsaved changes will not reflect</p>
             </div>
         </div>
 
@@ -37,10 +37,7 @@
                     <p>{{member.created}}</p>
                 </div>
             </div>
-            <div class="card-footer">
-                <button [disabled]="!editForm.dirty" form="editform"class="btn btn-success col-12"> Save changes</button>
-               
-            </div>
+            
         </div>
 
     </div>
@@ -62,23 +59,23 @@
                     <textarea class="form-control"
                     [(ngModel)]="member.lookingFor"
                     name="lookingFor"
-                    rows="6"
+                    rows="3"
                     ></textarea>
 
                     <h4 class="mt-2">Interests</h4>
                     <textarea class="form-control"
                     [(ngModel)]="member.interests"
                     name="interests"
-                    rows="6"
+                    rows="3"
                     ></textarea>
 
                     <h4 class="mt-2"> Location details:</h4>
                     <div class="d-flex flex-row align-item-center mb-5">
 
-                        <label for="city">City:</label>
+                        <label for="city"><strong>City:</strong></label>
                         <input type="text" [(ngModel)]="member.city" name="city" class="form-control mx-2">
 
-                        <label for="city">Country:</label>
+                        <label for="city"><strong>Country:</strong></label>
                         <input type="text" [(ngModel)]="member.country" name="country" class="form-control mx-2">
 
 
@@ -99,6 +96,11 @@
 
            
         </tabset>
+        <div>
+            <button [disabled]="!editForm.dirty" form="editform"class="btn thisbtn col-12"> Save changes</button>
+
+        </div>
+        
 
     </div>
 

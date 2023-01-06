@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FirstWebApi_Backend.Controllers
@@ -70,6 +71,22 @@ namespace FirstWebApi_Backend.Controllers
 
             
         // }
+
+
+      [HttpPut]
+      public async Task<ActionResult> UpdateUser(MemberUpdateDto mem){
+        var username= User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var user=await _userRepository.GetUserByUsernameAsync(username);
+        if(user==null) return NotFound();
+          Console.WriteLine("user got");
+      var hi=  _mapper.Map(mem,user);
+ Console.WriteLine(hi);
+        if( await _userRepository.SaveAllAsync()) return NoContent();
+
+        return BadRequest("Failed to update userddd");
+
+      }
+
 
 
     }

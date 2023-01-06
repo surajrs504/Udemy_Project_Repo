@@ -19,6 +19,7 @@ export class NavComponent implements OnInit {
 currentUser$:Observable<User | null>=of(null);
 
   data: any = {}
+  
   constructor(public account: AccountService, private route:Router) { }
 
   ngOnInit(): void {
@@ -34,6 +35,7 @@ currentUser$:Observable<User | null>=of(null);
 
 
   login() {
+    
     console.log(this.model);
     this.account.login(this.model).subscribe({
       next: response => {
@@ -45,8 +47,17 @@ currentUser$:Observable<User | null>=of(null);
   }
 
   logout(){
+    
     this.route.navigateByUrl("/");
     this.account.logout();
+    
+  }
+
+  redirect(){
+    if(this.account.currentuser$){this.route.navigateByUrl("/members")}
+    else{
+      this.route.navigateByUrl("/")
+    }
     
   }
 }

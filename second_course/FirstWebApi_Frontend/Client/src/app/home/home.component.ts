@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-registerMode=false;
+registerMode:number=0;
   constructor() { }
   users:any
   ngOnInit(): void {
@@ -15,14 +15,18 @@ registerMode=false;
   }
 
   registerToggle(){
-    this.registerMode=!this.registerMode;
+    this.registerMode=1;
   }
 
   
 
 
   cancelRegisterMode(event:any){
-this.registerMode=event;
+this.registerMode=0;
   }
 
+
+      login(){
+        this.registerMode=2;
+      }
 }

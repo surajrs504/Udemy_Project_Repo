@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj": {}
+    "c:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj": {
+    "c:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj",
+        "projectUniqueName": "c:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj",
+        "projectPath": "c:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\API.csproj",
         "packagesPath": "C:\\Users\\suraj.shiriya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\obj\\",
+        "outputPath": "c:\\Users\\suraj.shiriya\\Desktop\\Udemy_Project\\second_course\\Udemy_Course_Backend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -26,7 +26,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +47,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.0, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.20.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
